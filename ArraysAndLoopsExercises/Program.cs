@@ -63,13 +63,26 @@ namespace ArraysAndLoopsExercises
         static void SortTheNumbers()
         {
             // Ask 10 people for their favorite numbers and create an array of those numbers. 
-            // Order the numbers using the sort method. Print the first and last numbers.
+            // Order the numbers using the sort method. Print the first/smallest and last/largest numbers.
+
+            //ask for a number 10 ten times -> store those numbers in an array -> use Sort -> print 1 & 10
 
             Console.Clear();
             Console.WriteLine("SORT THE NUMBERS\n");
 
             // Enter your solution here
 
+            int[] numsArr = new int[10];        ;
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("What's your fav number: ");
+                int num= Convert.ToInt32(Console.ReadLine());
+                numsArr[i] = num;
+            }
+            //Array.Sort(numsArr);
+            Console.WriteLine($"The first number is: {numsArr[0]} and the tenth number is {numsArr[9]}");
+            
+           
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
